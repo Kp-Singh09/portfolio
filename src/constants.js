@@ -165,6 +165,6 @@ import echopayLogo from './assets/work_logo/echopay.png';
       image: echopayLogo,
       tags: ["Next JS", "PostgreSQL", "Prisma", "Tailwind CSS","NextAuth.js","Turborepo", "TypeScript"],
       github: "https://github.com/Kp-Singh09/Echo-Pay",
-      webapp: "https://paytm-test-user-app.vercel.app/",
+      webapp: "https://echo-pay.vercel.app/",
     },
   ];  
