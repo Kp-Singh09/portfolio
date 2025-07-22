@@ -163,7 +163,7 @@ import echopayLogo from './assets/work_logo/echopay.png';
       description:
         "EchoPay is a full-stack digital wallet application built as a monorepo using Turborepo. It enables users to manage their funds, perform peer-to-peer (P2P) transfers, and view a detailed history of their transactions. The project simulates a real-world payment system with a user-facing application and a mock bank webhook service.",
       image: echopayLogo,
-      tags: ["Next JS", "PostgreSQL", "Prisma", "Tailwind CSS","NextAuth.js","Turborepo", "TypeScript"],
+      tags: ["Next JS", "MongoDB", "Mongoose", "Tailwind CSS","NextAuth.js","Turborepo", "TypeScript"],
       github: "https://github.com/Kp-Singh09/Echo-Pay",
       webapp: "https://echo-pay.vercel.app/",
     },
