@@ -68,7 +68,7 @@ const Work = () => {
   return (
     <section
       id="work"
-      className="py-24 pb-20 px-[8vw] md:px-[6vw] lg:px-[14vw] font-sans relative"
+      className="py-24 pb-20 px-[8vw] md:px-[6vw] lg:px-[10vw] font-sans relative"
     >
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold text-white">PROJECTS</h2>
