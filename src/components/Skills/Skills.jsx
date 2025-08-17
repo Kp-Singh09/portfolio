@@ -34,7 +34,7 @@ const renderSkillsRow = (skills, animation) => (
   return (
     <section
       id="skills"
-      className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[20vw] font-sans relative"
+      className="py-24 pb-24  font-sans relative"
     >
       <div className="text-center mb-8">
         <h2 className="text-3xl sm:text-4xl font-bold text-white">SKILLS</h2>
@@ -51,8 +51,10 @@ const renderSkillsRow = (skills, animation) => (
       {renderSkillsRow(bottomRowSkills, "scroll-right")}
 
       {}
-      <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black to-transparent pointer-events-none"></div>
-      <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black to-transparent pointer-events-none"></div>
+      <div className="absolute inset-y-0 left-0 w-48 bg-gradient-to-r from-black to-transparent pointer-events-none"></div>
+      <div className="absolute inset-y-0 right-0 w-48 bg-gradient-to-l from-black to-transparent pointer-events-none"></div>
+    
+    
     </section>
   );
 };

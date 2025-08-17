@@ -4,19 +4,13 @@ import cssLogo from './assets/tech_logo/css.png';
 import prismaLogo from './assets/tech_logo/prisma.png';
 import javascriptLogo from './assets/tech_logo/javascript.png';
 import reactjsLogo from './assets/tech_logo/reactjs.png';
-//import angularLogo from './assets/tech_logo/angular.png';
-//import reduxLogo from './assets/tech_logo/redux.png';
 import nextjsLogo from './assets/tech_logo/nextjs.png';
 import tailwindcssLogo from './assets/tech_logo/tailwindcss.png';
-//import gsapLogo from './assets/tech_logo/gsap.png';
-//import materialuiLogo from './assets/tech_logo/materialui.png';
 import bootstrapLogo from './assets/tech_logo/bootstrap.png';
-//import springbootLogo from './assets/tech_logo/springboot.png';
 import nodejsLogo from './assets/tech_logo/nodejs.png';
 import expressjsLogo from './assets/tech_logo/express.png';
 import mysqlLogo from './assets/tech_logo/mysql.png';
 import mongodbLogo from './assets/tech_logo/mongodb.png';
-//import firebaseLogo from './assets/tech_logo/firebase.png';
 import cLogo from './assets/tech_logo/c.png';
 import cppLogo from './assets/tech_logo/cpp.png';
 import javaLogo from './assets/tech_logo/java.png';
@@ -27,11 +21,8 @@ import githubLogo from './assets/tech_logo/github.png';
 import vscodeLogo from './assets/tech_logo/vscode.png';
 import postmanLogo from './assets/tech_logo/postman.png';
 import mcLogo from './assets/tech_logo/mc.png';
-//import figmaLogo from './assets/tech_logo/figma.png';
-//import netlifyLogo from './assets/tech_logo/netlify.png';
 import vercelLogo from './assets/tech_logo/vercel.png';
 import postgreLogo from './assets/tech_logo/postgre.png';
-//import csharpLogo from './assets/tech_logo/csharp.png';
 
 
 // Education Section Logo's
@@ -47,22 +38,15 @@ export const SkillsInfo = [
     skills: [
       { name: 'HTML', logo: htmlLogo },
       { name: 'CSS', logo: cssLogo },
-      //{ name: 'SASS', logo: sassLogo },
-      //{ name: 'JavaScript', logo: javascriptLogo },
       { name: 'React JS', logo: reactjsLogo },
-      //{ name: 'Angular', logo: angularLogo },
-      //{ name: 'Redux', logo: reduxLogo },
       { name: 'Next JS', logo: nextjsLogo },
       { name: 'Tailwind CSS', logo: tailwindcssLogo },
-      //{ name: 'GSAP', logo: gsapLogo },
-      //{ name: 'Material UI', logo: materialuiLogo },
       { name: 'Bootstrap', logo: bootstrapLogo },
     ],
   },
   {
     title: 'Backend',
     skills: [
-      //{ name: 'Springboot', logo: springbootLogo },
       { name: 'Node JS', logo: nodejsLogo },
       { name: 'Express JS', logo: expressjsLogo },
       { name: 'MySQL', logo: mysqlLogo },
@@ -78,7 +62,6 @@ export const SkillsInfo = [
       { name: 'C++', logo: cppLogo },
       { name: 'Java', logo: javaLogo },
       { name: 'Python', logo: pythonLogo },
-      //{ name: 'C-Sharp', logo: csharpLogo },
       { name: 'JavaScript', logo: javascriptLogo },
       { name: 'TypeScript', logo: typescriptLogo },
     ],
@@ -92,8 +75,6 @@ export const SkillsInfo = [
       { name: 'Postman', logo: postmanLogo },
       { name: 'Compass', logo: mcLogo },
       { name: 'Vercel', logo: vercelLogo },
-      //{ name: 'Netlify', logo: netlifyLogo },
-      //{ name: 'Figma', logo: figmaLogo },
     ],
   },
 ];
@@ -133,12 +114,15 @@ export const SkillsInfo = [
 
   // Project Section Logo's
 import chitchatlogo from './assets/work_logo/chitchat.png';
-import blognestLogo from './assets/work_logo/blognest.png';
+import blognestLogo from './assets/work_logo/blognest2.png';
 import echopayLogo from './assets/work_logo/echopay.png';
+import structaquizlogo from './assets/work_logo/structaquiz.png';
+import repotestLogo from './assets/work_logo/repotest.png';
+
 
   export const projects = [
     {
-      id: 0,
+      id: 3,
       title: "Chit-Chat",
       description:
         "This is a simple, real-time web-based chat application built with Node.js, Express, and Socket.IO. It allows multiple users to join a chat room, set a username, and communicate instantly. The application features a clean user interface with both a light and a dark theme.",
@@ -148,23 +132,40 @@ import echopayLogo from './assets/work_logo/echopay.png';
       webapp: "https://chat-app-xsl9.onrender.com/",
     },
     {
-      id: 1,
+      "id": 1,
       title: "BlogNest",
-      description:
-        "BlogNest is a full-stack blogging platform where users can write, publish, update, delete, and explore blogs. It features user authentication, a beautiful UI, and a clean, responsive layout.",
+      description: "A full-stack blog application built with the MERN stack (MongoDB, Express.js, React, Node.js). It features user authentication with Clerk, allowing users to create, edit, and delete their own posts. The application includes features like post saving, comments, and a rich text editor. Admins have additional privileges, such as featuring posts, and a dedicated stats page provides analytics on top contributors and post performance.",
       image: blognestLogo,
-      tags: ["React.js", "Node.js", "JWT","Tailwind CSS", "Express", "TypeScript"],
-      github: "https://github.com/Kp-Singh09/Blogging_Frontend",
-      webapp: "https://blogging-frontend-six.vercel.app/",
+      tags: ["React","Node.js","Express","MongoDB","Image-kit","Clerk","Tailwind CSS","React Query"],
+      github: "https://github.com/Kp-Singh09/Blog-nest",
+      webapp: "https://blognest-frontend.vercel.app/"
     },
     {
-      id: 2,
+      id: 0,
       title: "EchoPay",
       description:
         "EchoPay is a full-stack digital wallet application built as a monorepo using Turborepo. It enables users to manage their funds, perform peer-to-peer (P2P) transfers, and view a detailed history of their transactions. The project simulates a real-world payment system with a user-facing application and a mock bank webhook service.",
       image: echopayLogo,
-      tags: ["Next JS", "MongoDB", "Mongoose", "Tailwind CSS","NextAuth.js","Turborepo", "TypeScript"],
+      tags: ["Next JS", "MongoDB","Typescript", "Mongoose", "Tailwind CSS","NextAuth.js","Turborepo"],
       github: "https://github.com/Kp-Singh09/Echo-Pay",
       webapp: "https://echo-pay.vercel.app/",
     },
+    {
+      id: 4 ,
+      title: "StructaQuiz",
+      description: "A full-stack MERN application for creating, sharing, and taking interactive quizzes with unique question formats like Comprehension, Categorize, and Cloze (Fill-in-the-Blanks). It features user authentication, a dashboard for managing forms, a form editor with image support, automated scoring, and detailed analytics with a user leaderboard.",
+      image: structaquizlogo,
+      tags: ["React","ImageKit","Framer Motion","Tailwind CSS","Axios","Node.js","Express.js","MongoDB","Mongoose","Clerk","Vite"],
+      github: "https://github.com/Kp-Singh09/StructaQuiz",
+      webapp: "https://structa-quiz.vercel.app/"
+    },
+    {
+      id: 2,
+      title: "RepoTest.AI",
+      description: "RepoTest AI is a full-stack web application designed to streamline the software testing process. It integrates directly with your GitHub account, allowing you to select code files from your repositories and use the power of Google's Gemini AI to automatically generate test case summaries and full, runnable test code for multiple languages and frameworks.",
+      image: repotestLogo,
+      tags: [ "GitHub API","Gemini API", "OAuth","React", "Tailwind CSS", "Node.js", "Express", ],
+      github: "https://github.com/Kp-Singh09/RepoTest.AI",
+      webapp: "https://repo-test-ai.vercel.app/"
+    }
   ];  

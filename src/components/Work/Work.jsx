@@ -1,9 +1,13 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 import { projects } from "../../constants";
 
 const Work = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const modalRef = useRef(null);
+
+  const sortedProjects = useMemo(() => {
+    return [...projects].sort((a, b) => a.id - b.id);
+  }, []);
 
   const handleOpenModal = (project) => {
     window.history.pushState({ modal: true }, "");
@@ -64,9 +68,8 @@ const Work = () => {
   return (
     <section
       id="work"
-      className="py-24 pb-24 px-[8vw] md:px-[6vw] lg:px-[14vw] font-sans relative"
+      className="py-24 pb-20 px-[8vw] md:px-[6vw] lg:px-[14vw] font-sans relative"
     >
-      {}
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold text-white">PROJECTS</h2>
         <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
@@ -76,21 +79,19 @@ const Work = () => {
         </p>
       </div>
 
-      {}
       <div className="grid gap-10 md:grid-cols-2">
-        {projects.map((project, index) => {
+        {sortedProjects.map((project, index) => {
           const isLastOdd =
-            index === projects.length - 1 && projects.length % 2 !== 0;
+            index === sortedProjects.length - 1 && sortedProjects.length % 2 !== 0;
 
           return (
             <div
               key={project.id}
-              onClick={() => handleOpenModal(project)} 
-              className={`cursor-pointer border border-white bg-gray-900 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden hover:shadow-purple-500/50 hover:-translate-y-2 transition-transform duration-300 ${
+              onClick={() => handleOpenModal(project)}
+              className={`cursor-pointer border border-gray-400 bg-gray-900 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden hover:shadow-purple-500/50 hover:-translate-y-2 transition-transform duration-300 ${
                 isLastOdd ? "md:col-span-2 md:max-w-[60%] md:mx-auto" : ""
               }`}
             >
-              {}
               <div className="p-4">
                 <img
                   src={project.image}
@@ -99,7 +100,6 @@ const Work = () => {
                 />
               </div>
 
-              {}
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-white mb-2">
                   {project.title}
@@ -108,7 +108,6 @@ const Work = () => {
                   {project.description}
                 </p>
 
-                {}
                 <div className="mt-4 flex flex-wrap gap-2 items-center">
                   {project.tags.slice(0, 3).map((tag, index) => (
                     <span
@@ -125,11 +124,10 @@ const Work = () => {
                   )}
                 </div>
 
-                {}
                 <div className="flex justify-center mt-6">
                   <button
                     onClick={(e) => {
-                      e.stopPropagation(); 
+                      e.stopPropagation();
                       handleOpenModal(project);
                     }}
                     className="px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm font-semibold rounded-full transition"
@@ -143,15 +141,12 @@ const Work = () => {
         })}
       </div>
 
-      {}
       {selectedProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
-          {}
           <div
             ref={modalRef}
             className="relative bg-gray-900 rounded-xl shadow-2xl w-[90%] max-w-3xl max-h-[90vh] overflow-y-auto"
           >
-            {}
             <button
               onClick={handleCloseModal}
               className="absolute top-3 right-4 text-white text-3xl font-bold hover:text-purple-500"
@@ -159,9 +154,7 @@ const Work = () => {
               &times;
             </button>
 
-            {}
             <div className="flex flex-col">
-              {}
               <div className="w-full flex justify-center bg-gray-900 p-4">
                 <img
                   src={selectedProject.image}
@@ -170,7 +163,6 @@ const Work = () => {
                 />
               </div>
 
-              {}
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-white mb-4">
                   {selectedProject.title}
@@ -179,7 +171,6 @@ const Work = () => {
                   {selectedProject.description}
                 </p>
 
-                {}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {selectedProject.tags.map((tag, index) => (
                     <span
@@ -191,7 +182,6 @@ const Work = () => {
                   ))}
                 </div>
 
-                {}
                 <div className="flex gap-4">
                   <a
                     href={selectedProject.github}
