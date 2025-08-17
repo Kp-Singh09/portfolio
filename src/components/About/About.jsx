@@ -98,7 +98,7 @@ const About = () => {
       {}
       <div className="flex justify-center mt-10">
         <a
-          href="https://drive.google.com/file/d/128pMS8aDvtedlKsJstB-GA4O310pMJA3/view?usp=sharing"
+          href="https://drive.google.com/file/d/127uTrJWjxmX3A2CQeVXmrMIfafOzo_7z/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block text-white py-3 px-8 rounded-full text-lg font-bold transition duration-300 transform hover:scale-105"
